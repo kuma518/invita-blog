@@ -1,0 +1,11 @@
+# Logged messages, from various tools
+*.log
+# A compiled distributable
+dist/
+
+# fucking macOS users
+.DS_Store
+
+# javascript dependencies from npm
+/node_modules/
+/package-lock.json
