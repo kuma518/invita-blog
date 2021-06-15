@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "rm -r dist/; vuepress build src/",
+    "dev": "vuepress dev src/"
+  },
+  "dependencies": {
+    "vuepress": "^1.8.2"
+  }
+}
