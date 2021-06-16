@@ -1,10 +1,12 @@
 {
   "private": true,
   "scripts": {
+    "fmt": "prettier --write src",
     "build": "rm -r dist/; vuepress build src/",
     "dev": "vuepress dev src/"
   },
   "dependencies": {
+    "prettier": "^2.3.1",
     "vuepress": "^1.8.2"
   }
 }
