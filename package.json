@@ -3,9 +3,12 @@
   "scripts": {
     "fmt": "prettier --write src",
     "build": "rm -r dist/; vuepress build src/",
-    "dev": "vuepress dev src/"
+    "dev": "vuepress dev src/",
+    "cloud:deploy": "firebase hosting:channel:deploy testing",
+    "cloud:info": "firebase login && firebase projects:list"
   },
   "dependencies": {
+    "firebase-tools": "^9.13.0",
     "prettier": "^2.3.1",
     "vuepress": "^1.8.2"
   }
