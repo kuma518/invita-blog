@@ -1,11 +1,10 @@
 {
   "private": true,
   "scripts": {
+    "dev": "vuepress dev src/",
     "fmt": "prettier --write src",
     "build": "rm -r dist/; vuepress build src/",
-    "dev": "vuepress dev src/",
-    "cloud:deploy": "firebase hosting:channel:deploy testing",
-    "cloud:info": "firebase login && firebase projects:list"
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "firebase-tools": "^9.13.0",
