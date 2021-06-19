@@ -8,7 +8,7 @@ Created by [the guy](https://github.com/torvalds) who made Linux. The program `g
 
 Git is available [almost everywhere](https://git-scm.com/downloads).
 
-Just use your package manager, like `apt` on Debian. For Windows users I recommend to download the installation wizard. Just leave all the default checkboxes, and spam the "next" button.
+Simply use your **package manager**, like `apt` on Debian. For Windows users I recommend to download the **installation wizard**. You can leave all the defaults checked and just spam "next".
 
 - `sudo apt-get install -y git` on Debian
 - [install wizard](https://git-scm.com/download/win) on Windows
@@ -22,7 +22,7 @@ Because `git` works offline, being a _distributed_ version control system, it ne
 - `$HOME/.gitconfig` on unix
 - `%USERPROFILE%\.gitconfig` on windows
 
-As an example, below is what my gitconfig looks like. I use my [profile](https://github.com/junaga) username and email address, so my commits will be recognized on GitHub. Also merge conflicts and other events will be opened in my configured editor.
+As an example, below is what my gitconfig looks like. I use my GitHub [profile](https://github.com/junaga) **username** and **email address**, so my commits will be recognized on GitHub. Also merge conflicts and other events will be opened in my configured editor.
 
 ```ini
 # C:\Users\junaga\.gitconfig
@@ -37,7 +37,7 @@ As an example, below is what my gitconfig looks like. I use my [profile](https:/
 ```
 
 :::tip pro tip
-Alternatively, you can set the `EDITOR` environment variable to `code --wait`, some tools (including git) read this var to determine your editor.
+Alternatively, you can set the `EDITOR` environment variable to `code --wait`, some tools (including git) read this variable to determine your editor.
 :::
 
 ## Workflow
