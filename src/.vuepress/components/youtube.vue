@@ -1,6 +1,10 @@
+<!--
+  A simple `iframe` embed (like copied from youtube directly) it NOT responsive
+-->
+
 <template>
   <div class="renderingAreaProvider">
-    <iframe :src="src" loading="lazy" allowfullscreen />
+    <iframe :src="url" loading="lazy" allowfullscreen />
   </div>
 </template>
 
@@ -8,31 +12,29 @@
 export default {
   props: ["id", "start"],
   computed: {
-    src() {
+    url() {
       let origin = "https://www.youtube.com"
       let path = `/embed/${this.id}`
       let params = `?start=${this.start ?? "0"}`
 
-      let url = origin + path + params
-      return url
+      return origin + path + params
     }
   }
 }
 </script>
 
 <style>
-/* IDK css, I copied this */
-
 .renderingAreaProvider {
   position: relative;
   /* `56.25%` indicates the aspect rasio (9/16 = 56.25%). */
   padding-bottom: calc(56.25%);
 
-  /* default: 16px */
+  /* usually 16px */
   margin-top: 1rem;
   margin-bottom: 1rem;
 
-  background: lightgray;
+  background: rgba(211, 211, 211, 0.5);
+  opacity: 0.9;
 }
 
 iframe {
