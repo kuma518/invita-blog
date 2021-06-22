@@ -51,6 +51,7 @@ module.exports = {
     repo: "https://github.com/junaga/invita-blog",
     docsBranch: "main",
     docsDir: "src",
+    repoLabel: "Code",
 
     // add a GitHub edit link in page footers
     editLinks: true,
@@ -73,8 +74,7 @@ module.exports = {
         // Switch language
         selectText: "Languages",
         label: "English",
-        // Link to GitHub repo
-        repoLabel: "Code",
+        // Builtin: GitHub Link
 
         // Sidebars for individual site sections
         sidebar: sections,
@@ -95,11 +95,10 @@ module.exports = {
             link: "/de" + section.path
           }
         }),
-        // Switch language
+        // Switch site language
         selectText: "Sprachen",
         label: "Deutsch",
-        // Link to GitHub repo
-        repoLabel: "Code",
+        // Builtin: GitHub Link
 
         // Sidebars for individual site sections
         sidebar: sections.map((section) => {
