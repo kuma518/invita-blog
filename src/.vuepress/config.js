@@ -1,7 +1,6 @@
 const sections = require("./sections.json")
 
 // ref: https://vuepress.vuejs.org/config
-// awesome: https://github.com/vuepress/awesome-vuepress
 module.exports = {
   // ==============
   // Local Settings
