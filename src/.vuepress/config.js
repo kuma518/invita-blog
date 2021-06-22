@@ -1,10 +1,13 @@
+const sections = require("./sections.json")
+
 // ref: https://vuepress.vuejs.org/config
 // awesome: https://github.com/vuepress/awesome-vuepress
 module.exports = {
+  // ==============
   // Local Settings
   // ==============
 
-  // Build output directory
+  // Build output destination
   dest: "dist/",
 
   // Dev server config
@@ -12,43 +15,23 @@ module.exports = {
   host: "0.0.0.0",
   port: "8080",
 
-  // App configuration
-  // =================
+  // ==================
+  // Site configuration
+  // ==================
 
-  // These also become the corresponding document `<head>` elements.
-  title: "Invita Blog",
-  description: "Tutorials and Documentation",
-
-  // The vuepress "default theme"
-  // A theme is a really sweet vue component, with look, feel and layout already done.
-  themeConfig: {
-    // Builtin: Site Home
-    // Builtin: Search box
-    // Site navbar
-    nav: [{ text: "Noobs", link: "/noobs/" }],
-
-    // Quick links to GitHub
-    repo: "https://github.com/junaga/invita-blog",
-    docsBranch: "main",
-    docsDir: "src",
-    repoLabel: "Code",
-    editLinks: "Edit on GitHub",
-
-    // Sidebars for individual site sections
-    sidebar: [
-      {
-        path: "/noobs/",
-
-        title: "Noobs",
-        collapsable: false,
-        children: ["/noobs/git"]
-      }
-    ],
-
-    // Opt out, of some features //
-    // No links in the page footers, to `next` and `prev` pages.
-    nextLinks: false,
-    prevLinks: false
+  // i18n
+  locales: {
+    "/": {
+      // en-US has the stupid MM/DD/YYYY date format
+      lang: "en-GB",
+      title: "Invita Blog",
+      description: "Updates, Tutorials and Documentation"
+    },
+    "/de/": {
+      lang: "de-DE",
+      title: "Invita Blog",
+      description: "Updates, Tutorials und Dokumentation"
+    }
   },
 
   plugins: {
@@ -56,6 +39,83 @@ module.exports = {
     "@vuepress/plugin-medium-zoom": {
       selector: "img",
       options: { background: "#444" }
+    }
+  },
+
+  // ===================
+  // The "Default Theme"
+  // ===================
+
+  themeConfig: {
+    // add links to GitHub
+    repo: "https://github.com/junaga/invita-blog",
+    docsBranch: "main",
+    docsDir: "src",
+
+    // add a GitHub edit link in page footers
+    editLinks: true,
+    // remove links in the page footers to `next` and `prev` pages.
+    nextLinks: false,
+    prevLinks: false,
+
+    locales: {
+      "/": {
+        // Builtin: Site Home
+
+        // Builtin: Search box
+        // navigate through the site sections
+        nav: sections.map((section) => {
+          return {
+            text: section.title,
+            link: section.path
+          }
+        }),
+        // Switch language
+        selectText: "Languages",
+        label: "English",
+        // Link to GitHub repo
+        repoLabel: "Code",
+
+        // Sidebars for individual site sections
+        sidebar: sections,
+
+        // page footers
+        editLinkText: "Edit on GitHub",
+        lastUpdated: "Last Updated"
+      },
+
+      "/de/": {
+        // Builtin: Site Home
+
+        // Builtin: Search box
+        // navigate through the site sections
+        nav: sections.map((section) => {
+          return {
+            text: section.title,
+            link: "/de" + section.path
+          }
+        }),
+        // Switch language
+        selectText: "Sprachen",
+        label: "Deutsch",
+        // Link to GitHub repo
+        repoLabel: "Code",
+
+        // Sidebars for individual site sections
+        sidebar: sections.map((section) => {
+          return {
+            title: section.title,
+            path: "/de" + section.path,
+
+            collapsable: section.collapsable,
+            children: section.children.map((link) => "/de" + link)
+          }
+        }),
+
+        // page footers
+        editLinkText: "Auf Github bearbeiten",
+        lastUpdated: "Letzte Aktualisierung"
+      }
     }
   }
 }

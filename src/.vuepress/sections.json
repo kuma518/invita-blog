@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Noobs",
+    "path": "/noobs/",
+
+    "collapsable": false,
+    "children": ["/noobs/git"]
+  }
+]
