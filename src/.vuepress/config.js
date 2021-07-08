@@ -79,7 +79,7 @@ module.exports = {
         sidebar: sections,
 
         // page footers
-        editLinkText: "Edit on GitHub",
+        editLinkText: "Edit Code",
         lastUpdated: "Last Updated"
       },
 
@@ -111,7 +111,7 @@ module.exports = {
         }),
 
         // page footers
-        editLinkText: "Auf Github bearbeiten",
+        editLinkText: "Code bearbeiten",
         lastUpdated: "Letzte Aktualisierung"
       }
     }
