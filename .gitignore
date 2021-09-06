@@ -2,14 +2,12 @@
 *.log
 # A compiled distributable
 dist/
-
 # fucking macOS users
 .DS_Store
-
 
 # javascript dependencies from npm
 /node_modules/
 /package-lock.json
 
-# Hashes of files pushed to Firebase Hosting
+# Caches of files (their hashes) already uploaded
 /.firebase/

@@ -16,7 +16,7 @@ echo "== Deploying build using the Firebase CLI =="
 
 echo -e "\nIs everything cool?"
 # node_modules/ with `firebase` bin is installed.
-# the machine is signed in.
+# the CLI is signed in.
 # a dist/ got build.
 npx firebase login --no-localhost
 npx firebase projects:list

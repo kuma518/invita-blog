@@ -14,5 +14,5 @@ npm install
 # Start a "dev server" (It has "Hot Reload")
 npm run dev
 
-# open `http://localhost:8080` in your Browser
+# open `http://localhost:3000` in your Browser
 ```

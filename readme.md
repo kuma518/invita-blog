@@ -1,10 +1,10 @@
-Source code of [invita.blog](https://invita.blog), the domain was registered by [junaga](mailto:hermann-stanew@invita.gmbh?subject=invita.blog). It is hosted serverless on the [Firebase Hosting](https://firebase.google.com/products/hosting) Google CDN/internet, and build using the [Vuepress](https://vuepress.vuejs.org/) framework, a _Static Site Generator_ which takes markdown `.md` files.
+Source code of [invita.blog](https://invita.blog), the domain was registered by [junaga](mailto:hermann-stanew@invita.gmbh?subject=invita.blog). It is hosted serverless on the [Firebase Hosting](https://firebase.google.com/products/hosting) Google CDN/internet, and built using the [Vuepress](https://vuepress.vuejs.org/) framework, a _Static Site Generator_ which takes markdown `.md` files.
 
 ## Help out with the code
 
 See `contributing.md` for a normal dev setup.
 
-Website pages are in `src/` (source), with German translations in `src/de/`. Go ahead and edit these right here on GitHub, all you need is an Account. A GitHub bot will then comment on your _Pull request_ with a preview URL, showcasing the changes. Whatever you edit or create, please make sure to [format your code](https://invita.link/prettier-playground) with prettier.
+Website pages are in `src/` (source). Go ahead and edit these right here on GitHub, all you need is an Account. A GitHub bot will then comment on your _Pull request_ with a preview URL, showcasing the changes. Whatever you edit or create, please make sure to [format your code](https://invita.link/prettier-playground) with prettier.
 
 ### Why vuepress
 
