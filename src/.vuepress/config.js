@@ -1,16 +1,8 @@
-const sections = require("./sections.json")
-
 // ref: https://vuepress.vuejs.org/config
 module.exports = {
-  // ==============
-  // Local Settings
-  // ==============
-
   // Build output destination
   dest: "dist/",
-
   // Dev server config
-  cache: false,
   host: "0.0.0.0",
   port: "3000",
 
@@ -18,20 +10,8 @@ module.exports = {
   // Site configuration
   // ==================
 
-  // i18n
-  locales: {
-    "/": {
-      // en-US has the stupid MM/DD/YYYY date format
-      lang: "en-GB",
-      title: "Invita Blog",
-      description: "Updates, Tutorials and Documentation"
-    },
-    "/de/": {
-      lang: "de-DE",
-      title: "Invita Blog",
-      description: "Updates, Tutorials und Dokumentation"
-    }
-  },
+  title: "Invita Blog",
+  description: "Updates, Tutorials und Dokumentation",
 
   plugins: {
     // Ability to zoom in (click) on images
@@ -50,70 +30,30 @@ module.exports = {
     repo: "https://github.com/junaga/invita-blog",
     docsBranch: "main",
     docsDir: "src",
+
+    // == Navbar ==
+
+    // BUILTIN: Site Home
+    // BUILTIN: Search box
+    // navigate through the site sections
+    nav: [
+      { text: "Posts", link: "/2021/" },
+      {
+        text: "Links",
+        items: [
+          { text: "invita.gmbh", link: "https://invita.gmbh" },
+          { text: "invita.dev", link: "https://invita.dev" }
+        ]
+      }
+    ],
+    // BUILTIN: repo Link
     repoLabel: "Code",
+
+    // == Page Footers ==
 
     // add a GitHub edit link in page footers
     editLinks: true,
-    // remove links in the page footers to `next` and `prev` pages.
-    nextLinks: false,
-    prevLinks: false,
-
-    locales: {
-      "/": {
-        // Builtin: Site Home
-
-        // Builtin: Search box
-        // navigate through the site sections
-        nav: sections.map((section) => {
-          return {
-            text: section.title,
-            link: section.path
-          }
-        }),
-        // Switch language
-        selectText: "Languages",
-        label: "English",
-        // Builtin: GitHub Link
-
-        // Sidebars for individual site sections
-        sidebar: sections,
-
-        // page footers
-        editLinkText: "Edit Code",
-        lastUpdated: "Last Updated"
-      },
-
-      "/de/": {
-        // Builtin: Site Home
-
-        // Builtin: Search box
-        // navigate through the site sections
-        nav: sections.map((section) => {
-          return {
-            text: section.title,
-            link: "/de" + section.path
-          }
-        }),
-        // Switch site language
-        selectText: "Sprachen",
-        label: "Deutsch",
-        // Builtin: GitHub Link
-
-        // Sidebars for individual site sections
-        sidebar: sections.map((section) => {
-          return {
-            title: section.title,
-            path: "/de" + section.path,
-
-            collapsable: section.collapsable,
-            children: section.children.map((link) => "/de" + link)
-          }
-        }),
-
-        // page footers
-        editLinkText: "Code bearbeiten",
-        lastUpdated: "Letzte Aktualisierung"
-      }
-    }
+    editLinkText: "Code bearbeiten",
+    lastUpdated: "Letzte Aktualisierung"
   }
 }
