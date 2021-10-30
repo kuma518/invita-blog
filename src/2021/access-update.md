@@ -8,4 +8,3 @@
 6. im Browser folgenden Link öffnen "https://invitagmbh-my.sharepoint.com/personal/produktion_invitagmbh_de/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fproduktion%5Finvitagmbh%5Fde%2FDocuments%2FWerk%202%2D3"
 7. mit den in "Lastpass" hinterlegten zugangsdaten anmelden
 8. in dem Ordner die aktuelle Version ersetzen
-9. Ende
